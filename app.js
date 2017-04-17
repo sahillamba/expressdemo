@@ -1,4 +1,5 @@
 var express = require('express');
+var router = express.Router();
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -9,6 +10,11 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
+
+app.set('json spaces', 20);
+
+
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
